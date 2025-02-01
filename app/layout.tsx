@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import StyledComponentsRegistry from '@/lib/registry'
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -25,9 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased container container-4xl`}
       >
-        {children}
+           <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
   );

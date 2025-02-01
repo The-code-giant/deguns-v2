@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        // If you need custom column configurations
+        '12': 'repeat(12, minmax(0, 1fr))',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
