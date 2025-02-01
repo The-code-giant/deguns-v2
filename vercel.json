@@ -1,0 +1,22 @@
+{
+    "crons": [
+      {
+        "path": "/api/cron/brand",
+        "schedule": "0 */12 * * *"
+      },
+      {
+        "path": "/api/cron/ssUpdater",
+        "schedule": "0 */2 * * *"
+      },
+      {
+        "path": "/api/cron/webhooks",
+        "schedule": "0 */1 * * *"
+      }
+    ],
+    "functions": {
+      "pages/api/webhooks/categories/**/*.ts": {
+        "maxDuration": 200
+      }
+    }
+  }
+  
