@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import StyledComponentsRegistry from '@/lib/registry'
-
+import ModalUI from '@/components/layout/modal-layout';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -30,6 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased container container-4xl`}
       >
            <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+           <ModalUI />
       </body>
     </html>
   );
